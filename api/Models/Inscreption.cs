@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 
 namespace api.Models
 {
-    public class Chapitre
+    public class Inscreption
     {
         public int Id { get; set; }
-        public string Titre { get; set; }=string.Empty;
-        public string Description { get; set; }=string.Empty;
+        public DateTime Date_inscription { get; set; }
+        public string Type_inscription { get; set; }=string.Empty;
         public int? FormationId { get; set; }
         public Formation? Formation { get; set; }
-        public List<Tutoriel> Tutoriels { get; set; } = new List<Tutoriel>(); 
+        public int? AppUserId { get; set; }
+        public AppUser? AppUser { get; set; }
+        
     }
 }
